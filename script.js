@@ -104,17 +104,7 @@ function mostrarCitasPorEstado(estado) {
             sintomas.classList.add('sintomas');
             cancelarCita.classList.add('cancelarCita');
 
-            if (item.estado !== 'Anulada') {
-                cancelarCita.textContent = "Cancelar Cita";
-                cancelarCita.addEventListener("click", function() {
-                    // Lógica para cancelar la cita, por ejemplo, cambiar su estado a "Anulada"
-                    item.estado = "Anulada";
-                    // Mostrar todas las citas después de cancelar
-                    mostrarTodasLasCitas();
-                });
-
-                container.appendChild(cancelarCita);
-            } else {
+            if (item.estado !== 'Abierta') {
                 // Ocultar el botón si la cita está en estado "Anulada"
                 cancelarCita.style.display = "none";
             }
