@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Agenda una cita</title>       
+    <title>Agenda una cita</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,7 @@
 
                 <label for="diaCita">
                     <p class="parrafos">Dia de la cita</p>
-                    <input type="date" id="diaCita">
+                    <input type="date" id="diaCita" min="" required>
                 </label>
 
                 <label for="horaCita">
@@ -53,32 +54,30 @@
                     <input type="time" id="horaCita">
                 </label>
 
-            </div>
-
-            <div class="p2">
-
                 <label for="Sintomas">
                     <p class="parrafos" id="a">Sintomas</p>
                     <input type="text" class="sin" id="Sintomas">
                 </label>
 
-                <button class="Agendar" onclick="Agendar()">Agendar Cita</button>
-
             </div>
+            <div class="agen">
+            <button class="Agendar" onclick="Agendar()">Agendar Cita</button>
+            </div>
+
         </section>
 
         <section class="registroDos">
             <h1 class="est">Estado de cita:</h1>
             <div class="contBut">
-                <button class="but"></button>
+                <button class="but" onclick="mostrarCitasPorEstado('Abierta')"></button>
                 <p class="par">Abierta</p>
             </div>
             <div class="contBut">
-                <button class="but"></button>
+                <button class="but" onclick="mostrarCitasPorEstado('Cerrada')"></button>
                 <p class="par">Cerrada</p>
             </div>
             <div class="contBut">
-                <button class="but"></button>
+                <button class="but" onclick="mostrarCitasPorEstado('Anulada')"></button>
                 <p class="par">Anulada</p>
             </div>
         </section>
@@ -86,7 +85,7 @@
     </div>
 
     <div id="containerPadre"></div>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 
 </html>
