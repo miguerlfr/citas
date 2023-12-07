@@ -1,0 +1,207 @@
+body {
+    background-color: rgba(114, 164, 204, 0.341);
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+}
+
+.contFilauno {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 200px;
+    width: max-content;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    margin-left: 135px;
+}
+
+.fondo {
+    position: fixed; /* Cambiado de fixed a absolute */
+    z-index: -999;
+    width: 100%;
+    height: 100%;
+    top: 0; /* Ajusta según tus necesidades */
+    left: 0; /* Ajusta según tus necesidades */
+}
+
+.titu {
+    text-align: center;
+    padding-bottom: 40px;
+    text-shadow: 
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+}
+
+.registro {
+    color: white;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.497);
+    width: 900px;
+    height: max-content;
+    font-size: 23px;
+    padding: 70px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 30px 4px;
+}
+
+.p1 {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.p2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parrafos {
+    font-weight: bold;
+    margin-bottom: -2px;
+    text-shadow: 
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+}
+
+.sin {
+    width: 400px;
+    height: 100px;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.783);
+    border: 1px solid black;
+    padding: 6px;
+}
+
+.select {
+    width: 6rem;
+    border: 1px solid black;
+    font-size: 15px;
+    height: 30px;
+    text-align: center;
+}
+
+.Agendar {
+    color: white;
+    width: 15rem;
+    margin-top: 40px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.527);
+    font-weight: 400;
+    padding: 5px;
+    border: 1px solid black;
+    text-shadow: 
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+}
+
+.registroDos {
+    color: white;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.812);
+    width: 300px;
+    height: max-content;
+    font-size: 23px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 30px 4px;
+    font-style: white; 
+    /* padding: 50px; */
+    gap: 50px;
+    padding: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.est {
+    text-align: center;
+    text-shadow: 
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    margin-bottom: 40px;
+}
+
+.contBut {
+    display: flex;
+    margin-left: 33%;
+}
+
+.but {
+    height: 12px;
+    width: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: 6px;
+}
+
+.par {
+    margin-left: 6px;
+    color: black;
+    font-size: 20.5px;
+}
+
+#containerPadre {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 300px;
+}
+
+.container {border: 1px solid red;
+    width: 400px;
+    height: auto;
+    font-size: 20px;
+}
+
+.imagen {border: 1px solid red;
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nombre {border: 1px solid red;
+    padding-left: 40px;
+}
+
+.propietario {border: 1px solid red;
+    padding-left: 40px;
+}
+
+.telefono{border: 1px solid red;
+    padding-left: 40px;
+}
+
+.tipo {border: 1px solid red;
+    padding-left: 40px;
+}
+
+.dia {border: 1px solid red;
+    padding-left: 40px;
+}
+
+.hora {border: 1px solid red;
+    padding-left: 40px;
+}
+
+.sintomas {border: 1px solid red;
+    padding-left: 40px;
+}
