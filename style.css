@@ -9,6 +9,17 @@ body {
     font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
 }
 
+.cont_banda {
+    position: absolute;
+    right: 680px;
+    z-index: 999;
+    bottom: 305px;
+}
+
+.banda {
+    width: 300px;
+}
+
 .contFilauno {
     display: flex;
     flex-direction: row;
@@ -221,5 +232,5 @@ input {
     display: block;
     margin: auto;
     margin-bottom: 20px;
-    font-size: 17px;
+    font-size: 16px;
 }
