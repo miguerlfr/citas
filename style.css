@@ -10,16 +10,12 @@ body {
 }
 
 .contFilauno {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 200px;
-    width: max-content;
-    height: max-content;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 4%;
     margin-bottom: 5%;
-    margin-left: 135px;
+    margin-left: 13%;
 }
 
 .fondo {
@@ -42,28 +38,22 @@ body {
 }
 
 .registro {
+    max-width: 38em;
     color: white;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.497);
-    width: 900px;
-    height: max-content;
+    background-color: rgba(255, 255, 255, 0.661);
     font-size: 23px;
-    padding: 70px;
+    padding: 3.5%;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 30px 4px;
 }
 
 .p1 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 70px;
+    gap: 25px 50px;
     flex-wrap: wrap;
     padding-bottom: 40px;
-}
-
-.p2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .parrafos {
@@ -95,10 +85,15 @@ input {
     text-align: center;
 }
 
+.agen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .Agendar {
     color: white;
     width: 15rem;
-    margin-top: 40px;
     font-size: 18px;
     background-color: rgba(255, 255, 255, 0.527);
     font-weight: 400;
@@ -115,34 +110,36 @@ input {
     color: white;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.812);
-    width: 300px;
+    min-width: 10cqmax;
     height: max-content;
     font-size: 23px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 30px 4px;
-    font-style: white; 
-    /* padding: 50px; */
-    gap: 50px;
-    padding: 40px;
+    padding: 20px;
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: 100px;
 }
 
 .est {
+    font-size: 21px;
     text-align: center;
     text-shadow: 
         -1px -1px 0 black,
          1px -1px 0 black,
         -1px  1px 0 black,
          1px  1px 0 black;
-    margin-bottom: 40px;
+    margin-bottom: 15%;
 }
 
 .contBut {
     display: flex;
-    margin-left: 33%;
+    text-align: center;
+    justify-content: center;
+    padding-right: 10%;
 }
 
 .but {
+    display: flex;
     height: 12px;
     width: 12px;
     margin-top: auto;
@@ -155,53 +152,74 @@ input {
 .par {
     margin-left: 6px;
     color: black;
-    font-size: 20.5px;
+    font-size: 17px;
 }
 
 #containerPadre {
     display: flex;
-    gap: 20px;
-    width: 100%;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 300px;
+    gap: 90px;
+    width: 100%;
+    margin-bottom: 150px;
 }
 
-.container {border: 1px solid red;
-    width: 400px;
-    height: auto;
+.container {
+    color: rgb(132, 1, 255);
+    font-weight: bold;
     font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.812);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(62, 46, 240, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
-.imagen {border: 1px solid red;
-    width: 400px;
-    height: 100%;
+.imagen {
+    width: 320px;
+    height: 400px;
     object-fit: cover;
 }
 
-.nombre {border: 1px solid red;
-    padding-left: 40px;
+.nombre {
+    padding-top: 20px;
+    padding-left: 50px;
 }
 
-.propietario {border: 1px solid red;
-    padding-left: 40px;
+.propietario {
+    padding-left: 50px;
 }
 
-.telefono{border: 1px solid red;
-    padding-left: 40px;
+.telefono{
+    padding-left: 50px;
 }
 
-.tipo {border: 1px solid red;
-    padding-left: 40px;
+.tipo {
+    padding-left: 50px;
 }
 
-.dia {border: 1px solid red;
-    padding-left: 40px;
+.dia {
+    padding-left: 50px;
 }
 
-.hora {border: 1px solid red;
-    padding-left: 40px;
+.hora {
+    padding-left: 50px;
 }
 
-.sintomas {border: 1px solid red;
-    padding-left: 40px;
+.sintomas {
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+.swal-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.cancelarCita {
+    background-color: rgba(163, 39, 212, 0.62);
+    color: white;
+    padding: 7px;
+    width: 150px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 17px;
 }
