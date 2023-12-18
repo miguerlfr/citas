@@ -7,7 +7,7 @@ body {
     border: 0;
     padding: 0;
     font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
-    transition: 3s;
+    transition: .1s;
 }
 
 .banda {
@@ -23,7 +23,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 4%;
-    margin-bottom: 10%;
     margin-left: 13%;
 }
 
@@ -58,6 +57,7 @@ body {
     padding: 3.5%;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 30px 4px;
     position: relative;
+    height: max-content;
 }
 
 .p1 {
@@ -91,6 +91,7 @@ input {
 }
 
 .select {
+    background-color: rgba(255, 255, 255, 0.783);
     width: 6rem;
     border: 1px solid black;
     font-size: 15px;
@@ -170,17 +171,24 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 90px;
+    gap: 10%;
     width: 100%;
-    margin-bottom: 150px;
+    height: auto;
 }
 
-.container {
+.container {border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: rgb(132, 1, 255);
     font-weight: bold;
     font-size: 20px;
     background-color: rgba(255, 255, 255, 0.812);
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(62, 46, 240, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    word-wrap: break-word;
+    margin-bottom: 11%;
+    margin-top: 13%;
 }
 
 .imagen {
@@ -191,37 +199,29 @@ input {
 
 .nombre {
     padding-top: 20px;
-    padding-left: 50px;
 }
 
-.propietario {
-    padding-left: 50px;
-}
-
-.telefono {
-    padding-left: 50px;
-}
-
-.tipo {
-    padding-left: 50px;
-}
-
-.dia {
-    padding-left: 50px;
-}
-
-.hora {
-    padding-left: 50px;
+.nombre, .propietario, .telefono, .tipo, .dia, .hora, .sintomas {
+    width: 220px;
 }
 
 .sintomas {
-    padding-bottom: 20px;
-    padding-left: 50px;
+    padding-bottom: 15px;
 }
 
 .swal-button-container {
     display: flex;
     justify-content: center;
+}
+
+.editarCita {
+    background-color: rgba(163, 39, 212, 0.62);
+    color: white;
+    padding: 7px;
+    width: 150px;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
 }
 
 .cancelarCita {
@@ -230,9 +230,13 @@ input {
     padding: 7px;
     width: 150px;
     display: block;
-    margin: auto;
-    margin-bottom: 20px;
     font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el botón seleccionado */
+.selected {
+    background-color: blue;
 }
 
 @media (max-width: 1500px) {
@@ -317,7 +321,6 @@ input {
         flex-direction: row;
         flex-wrap: wrap;
         margin-top: 4%;
-        margin-bottom: 15%;
         margin-left: 13%;
     }
 }
@@ -359,7 +362,6 @@ input {
         flex-direction: row;
         flex-wrap: wrap;
         margin-top: 4%;
-        margin-bottom: 35%;
         margin-left: 13%;
     }
 }
