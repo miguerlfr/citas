@@ -2,93 +2,98 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Agenda una cita</title>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>   
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Agenda una cita</title>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
 
-    <img class="fondo"
-        src="img/fondo.jpg">
+  <img class="fondo" src="img/fondo.jpg">
 
-    <div class="contFilauno">
-        <section class="registro">
-            <h1 class="titu">Agenda una cita</h1>
+  <div class="contFilauno">
+    <section class="registro">
+      <h1 class="titu">Agenda una cita</h1>
 
-            <div class="p1">
+      <div class="p1">
 
-                <label for="nombreMascota">
-                    <p class="parrafos">Nombre de la mascota</p>
-                    <input type="text" id="nombreMascota">
-                </label>
+        <label for="nombreMascota">
+          <p class="parrafos">Nombre de la mascota</p>
+          <input type="text" id="nombreMascota">
+        </label>
 
-                <label for="Propietario">
-                    <p class="parrafos">Propietario</p>
-                    <input type="text" id="Propietario">
-                </label>
+        <label for="Propietario">
+          <p class="parrafos">Propietario</p>
+          <input type="text" id="Propietario">
+        </label>
 
-                <label for="Telefono">
-                    <p class="parrafos">Telefono</p>
-                    <input type="tel" id="Telefono">
-                </label>
+        <label for="Telefono">
+          <p class="parrafos">Telefono</p>
+          <input type="tel" id="Telefono">
+        </label>
 
-                <label for="tipoMascota">
-                    <p class="parrafos">Tipo de mascota</p>
-                    <select class="select" id="tipoMascota">
-                        <option value="Perro" class="tipo">Perro</option>
-                        <option value="Gato" class="tipo">Gato</option>
-                        <option value="Conejo" class="tipo">Conejo</option>
-                        <option value="Tortuga" class="tipo">Tortuga</option>
-                    </select>
-                </label>
+        <label for="tipoMascota">
+          <p class="parrafos">Tipo de mascota</p>
+          <select class="select" id="tipoMascota">
+            <option value="Perro" class="tipo">Perro</option>
+            <option value="Gato" class="tipo">Gato</option>
+            <option value="Conejo" class="tipo">Conejo</option>
+            <option value="Tortuga" class="tipo">Tortuga</option>
+          </select>
+        </label>
 
-                <label for="diaCita">
-                    <p class="parrafos">Dia de la cita</p>
-                    <input type="date" id="diaCita" min="" required>
-                </label>
+        <label for="diaCita">
+          <p class="parrafos">Dia de la cita</p>
+          <input type="date" id="diaCita" min="" required>
+        </label>
 
-                <label for="horaCita">
-                    <p class="parrafos">Hora de la cita</p>
-                    <input type="time" id="horaCita">
-                </label>
+        <label for="horaCita">
+          <p class="parrafos">Hora de la cita</p>
+          <input type="time" id="horaCita">
+        </label>
 
-                <label for="Sintomas">
-                    <p class="parrafos" id="a">Sintomas</p>
-                    <input type="text" class="sin" id="Sintomas">
-                </label>
+        <label for="Sintomas">
+          <p class="parrafos" id="a">Sintomas</p>
+          <input type="text" class="sin" id="Sintomas">
+        </label>
 
-            </div>
-            <div class="agen">
-            <button class="Agendar" onclick="Agendar()">Agendar Cita</button>
-            </div>
+      </div>
+      
+      <div class="agen">
+        <button class="Agendar" onclick="Agendar()">
+          <span id="agendarButtonText">Agendar Cita</span>
+          </button>
+      </div>
 
-                <img src="img/banda.png" class="banda">
+      <img src="img/banda.png" class="banda">
 
-        </section>
+    </section>
 
-        <section class="registroDos">
-            <h1 class="est">Estado de cita:</h1>
-            <div class="contBut">
-                <button class="but" onclick="mostrarCitasPorEstado('Abierta')"></button>
-                <p class="par">Abierta</p>
-            </div>
-            <div class="contBut">
-                <button class="but" onclick="mostrarCitasPorEstado('Cerrada')"></button>
-                <p class="par">Cerrada</p>
-            </div>
-            <div class="contBut">
-                <button class="but" onclick="mostrarCitasPorEstado('Anulada')"></button>
-                <p class="par">Anulada</p>
-            </div>
-        </section>
+    <section class="registroDos">
+      <h1 class="est">Estado de cita:</h1>
+      <div class="contBut">
+        <button id="abiertaBtn" class="but" onclick="mostrarCitasPorEstado('Abierta')"></button>
+        <p class="par">Abierta</p>
+      </div>
+      
+      <div class="contBut">
+        <button id="cerradaBtn" class="but" onclick="mostrarCitasPorEstado('Cerrada')"></button>
+        <p class="par">Cerrada</p>
+      </div>
+      
+      <div class="contBut">
+        <button id="anuladaBtn" class="but" onclick="mostrarCitasPorEstado('Anulada')"></button>
+        <p class="par">Cancelado</p>
+      </div>
+    </section>
 
-    </div>
+  </div>
 
-    <div id="containerPadre"></div>
+  <div id="containerPadre"></div>
 
+  <script src="script.js"></script>
 </body>
+
 </html>
