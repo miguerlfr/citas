@@ -31,11 +31,13 @@ body {
     /* Cambiado de fixed a absolute */
     z-index: -999;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     top: 0;
     /* Ajusta según tus necesidades */
     left: 0;
     /* Ajusta según tus necesidades */
+    right: 0;
+    bottom: 0;
 }
 
 .titu {
