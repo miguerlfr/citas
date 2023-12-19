@@ -27,6 +27,7 @@ body {
 }
 
 .fondo {
+    object-fit: cover;
     position: fixed;
     /* Cambiado de fixed a absolute */
     z-index: -999;
@@ -36,7 +37,6 @@ body {
     /* Ajusta según tus necesidades */
     left: 0;
     /* Ajusta según tus necesidades */
-    object-fit: cover;
 }
 
 .titu {
